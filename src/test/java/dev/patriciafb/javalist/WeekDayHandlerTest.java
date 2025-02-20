@@ -4,6 +4,8 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.contains;
+import static org.hamcrest.Matchers.is;
+
 import java.util.List;
 
 class WeekDayHandlerTest {
@@ -31,7 +33,7 @@ class WeekDayHandlerTest {
         int SizeExpected = 7;
         WeekDayHandler weekDayHandler = new WeekDayHandler();
         List<String> weekDays = weekDayHandler.getDays();
-        assertThat(weekDays.size(), is(SizeExpected));
+        assertThat(weekDays.size(), is(7));
     }
 
 
