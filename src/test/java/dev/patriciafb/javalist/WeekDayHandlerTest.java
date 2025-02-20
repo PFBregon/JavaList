@@ -36,6 +36,16 @@ class WeekDayHandlerTest {
         assertThat(weekDays.size(), is(7));
     }
 
+    @Test
+    @DisplayName("deleteDayTest")
+    void deleteDayTest() {
+        WeekDayHandler weekDayHandler = new WeekDayHandler();
+        List<String> weekDays = weekDayHandler.getDays();
+        weekDays.remove("Monday");
+        assertThat(weekDays, contains("Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"));
+
+    }
+
 
 
 
