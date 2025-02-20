@@ -1,3 +1,5 @@
+package dev.patriciafb.javalist;
+
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -7,12 +9,11 @@ import java.util.List;
 class WeekDayHandlerTest {
 
     @Test
-    @DisplayName("weekDayHandlerTest")
-    void weekDayHandlerList() {
-        WeekDayHandler weekList = new WeekDayHandler();
-        assertThat(days, contains(
-                "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"
-        ));
+    @DisplayName("createListTest")
+    void createListTest() {
+        WeekDayHandler weekDayHandler = new WeekDayHandler();
+        List<String> weekDays = weekDayHandler.createList();
+        assertThat(weekDays, contains("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"));
     }
 
 
