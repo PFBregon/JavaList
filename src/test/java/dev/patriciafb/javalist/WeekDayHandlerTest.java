@@ -16,5 +16,16 @@ class WeekDayHandlerTest {
         assertThat(weekDays, contains("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"));
     }
 
+    @Test
+    @DisplayName("getDaysTest")
+    void getDaysTest() {
+        WeekDayHandler weekDayHandler = new WeekDayHandler();
+        List<String> weekDays = weekDayHandler.getDays();
+        assertThat(weekDays, contains("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"));
+
+    }
+
+
+
 
 }
