@@ -25,6 +25,17 @@ class WeekDayHandlerTest {
 
     }
 
+    @Test
+    @DisplayName("getSizeListTest")
+    void getSizeListTest() {
+        int SizeExpected = 7;
+        WeekDayHandler weekDayHandler = new WeekDayHandler();
+        List<String> weekDays = weekDayHandler.getDays();
+        assertThat(weekDays.size(), is(SizeExpected));
+    }
+
+
+
 
 
 
