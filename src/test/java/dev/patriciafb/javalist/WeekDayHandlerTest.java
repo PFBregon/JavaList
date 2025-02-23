@@ -40,15 +40,11 @@ class WeekDayHandlerTest {
     @DisplayName("deleteDayTest")
     void deleteDayTest() {
         WeekDayHandler weekDayHandler = new WeekDayHandler();
-        List<String> weekDays = weekDayHandler.getDays();
-        weekDays.remove("Monday");
-        assertThat(weekDays, contains("Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"));
+        weekDayHandler.removeDay("Monday");
 
+        List<String> expectedDays = List.of("Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday");
+
+        assertThat(weekDayHandler.getDays(), contains(expectedDays.toArray()));
     }
 
-
-
-
-
-
-}
+    }
