@@ -79,6 +79,15 @@ class WeekDayHandlerTest {
         assertThat(weekDayHandler.getDays(), contains(expectedSortedDays.toArray()));
     }
 
+    @Test
+    @DisplayName("emptyListTest")
+    void emptyListTest() {
+        WeekDayHandler weekDayHandler = new WeekDayHandler();
+        assertThat(weekDayHandler.getDays().size(), is(7));
+        weekDayHandler.clear();
+        assertThat(weekDayHandler.getDays().isEmpty(), is(true));
+    }
+
 
     }
 
