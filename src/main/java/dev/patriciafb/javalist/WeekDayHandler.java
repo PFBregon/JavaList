@@ -45,6 +45,10 @@ public String getSpecificDay(String string) {
 public boolean dayExists(String day) {
     return days.contains(day);
 }
+
+public void sortAlphabetically() {
+    days.sort(null);
+}
 }
 
 
