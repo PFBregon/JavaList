@@ -42,6 +42,9 @@ public String getSpecificDay(String string) {
             return days.contains(day) ? day : null;
 }
 
+public boolean dayExists(String day) {
+    return days.contains(day);
+}
 }
 
 
