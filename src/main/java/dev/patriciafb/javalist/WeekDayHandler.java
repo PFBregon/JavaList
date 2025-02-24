@@ -37,5 +37,11 @@ public void removeDay(String day) {
     days.remove(day);
 }
 
+public String getSpecificDay(String string) {
+    String day = string;
+            return days.contains(day) ? day : null;
+}
 
 }
+
+
