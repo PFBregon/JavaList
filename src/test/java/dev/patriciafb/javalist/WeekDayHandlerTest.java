@@ -55,6 +55,23 @@ class WeekDayHandlerTest {
         assertThat(day, is("Wednesday"));
     }
 
+    @Test
+    @DisplayName("dayExistsTest")
+    void dayExistsTest() {
+        WeekDayHandler weekDayHandler = new WeekDayHandler();
+        List<String> validDays = List.of("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday");
+        for (String day : validDays) {
+            assertThat("El día " + day + " debería existir",
+                weekDayHandler.dayExists(day),
+                is(true));
+            assertThat("Funday no debería existir",
+                weekDayHandler.dayExists("Funday"),
+                is(false));
+        }
+
+    }
+
+
 
     }
 
