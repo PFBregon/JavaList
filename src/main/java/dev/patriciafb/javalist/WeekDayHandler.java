@@ -49,6 +49,10 @@ public boolean dayExists(String day) {
 public void sortAlphabetically() {
     days.sort(null);
 }
+
+public void emptyList() {
+    days.clear();
+}
 }
 
 

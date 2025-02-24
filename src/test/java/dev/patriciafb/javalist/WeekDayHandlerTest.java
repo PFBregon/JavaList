@@ -84,7 +84,7 @@ class WeekDayHandlerTest {
     void emptyListTest() {
         WeekDayHandler weekDayHandler = new WeekDayHandler();
         assertThat(weekDayHandler.getDays().size(), is(7));
-        weekDayHandler.clear();
+        weekDayHandler.emptyList();
         assertThat(weekDayHandler.getDays().isEmpty(), is(true));
     }
 
