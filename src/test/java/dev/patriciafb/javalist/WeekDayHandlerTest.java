@@ -68,9 +68,16 @@ class WeekDayHandlerTest {
                 weekDayHandler.dayExists("Funday"),
                 is(false));
         }
-
     }
 
+    @Test
+    @DisplayName("sortAlphabeticallyTest")
+    void sortAlphabeticallyTest() {
+        WeekDayHandler weekDayHandler = new WeekDayHandler();
+        List<String> expectedSortedDays = List.of("Friday", "Monday", "Saturday", "Sunday", "Thursday", "Tuesday", "Wednesday");
+        weekDayHandler.sortAlphabetically();
+        assertThat(weekDayHandler.getDays(), contains(expectedSortedDays.toArray()));
+    }
 
 
     }
