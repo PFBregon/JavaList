@@ -47,4 +47,15 @@ class WeekDayHandlerTest {
         assertThat(weekDayHandler.getDays(), contains(expectedDays.toArray()));
     }
 
+    @Test
+    @DisplayName("getSpecificDayTest")
+    void getSpecificDayTest() {
+        WeekDayHandler weekDayHandler = new WeekDayHandler();
+        String day = weekDayHandler.getSpecificDay("Wednesday");
+        assertThat(day, is("Wednesday"));
     }
+
+    }
+
+}
+
